@@ -1,0 +1,37 @@
+.stats {
+  font-size: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.numbers *{
+
+
+}
+
+.display-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: green;
+  margin: 0 auto;
+  color: purple;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  position: relative;
+  top: 25px;
+}
+
+#text-input {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 70px;
+  height: 70px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 20px;
+}
