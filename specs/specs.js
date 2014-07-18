@@ -57,3 +57,51 @@ describe("Tamagotchi", function(){
     })
   });
 });
+
+describe("Level", function(){
+  describe("initialize", function(){
+    it("sets the amount of combo blocks for the level", function(){
+      var levelTest = Object.create(Level);
+      levelTest.initialize([2,3,4]);
+      levelTest.red.should.equal(2);
+      levelTest.blue.should.equal(3);
+      levelTest.yellow.should.equal(4);
+    });
+  });
+  describe("redDown", function() {
+    it("decreases the amount of red blocks by one", function() {
+      var levelTest = Object.create(Level);
+      levelTest.initialize([2,3,4]);
+      levelTest.redDown();
+      levelTest.red.should.equal(1);
+    });
+  });
+  describe("blueDown", function() {
+    it("decreases the amount of blue blocks by one", function() {
+      var levelTest = Object.create(Level);
+      levelTest.initialize([2,3,4]);
+      levelTest.blueDown();
+      levelTest.blue.should.equal(2);
+    });
+  });
+  describe("yellowDown", function() {
+    it("decreases the amount of yellow blocks by one", function () {
+      var levelTest = Object.create(Level);
+      levelTest.initialize([2,3,4]);
+      levelTest.yellowDown();
+      levelTest.yellow.should.equal(3);
+    });
+  });
+  describe("winCheck", function() {
+    it("checks to see if the level was passed", function() {
+      var levelTest = Object.create(Level);
+      levelTest.initialize([0,0,0]);
+      levelTest.winCheck().should.equal(true);
+    });
+    it("checks to see if the level was not passed", function() {
+      var levelTest = Object.create(Level);
+      levelTest.initialize([3,3,3]);
+      levelTest.winCheck().should.equal(false);
+    });
+  });
+});
